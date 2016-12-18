@@ -10,13 +10,13 @@
 #include <iomanip>
 using namespace std;
 int main(int argc, const char * argv[]) {
-    long double ans[19];
+    long long ans[19];
     ans[1]=2;
     ans[2]=3;
     int n;
     cin>>n;
     for (int i=3;i<=n;i++){
-        ans[i] = (ans[i-1]*ans[i-2])+1;
+        ans[i] = ans[i-1]*(ans[i-1]-1)+1;
     }
     for (int i=1;i<=n;i++){
         cout<<fixed<<setprecision(0)<<ans[i]<<endl;
